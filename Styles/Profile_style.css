@@ -14,32 +14,33 @@
 
 .profile-title {
   text-align: center;
+  padding-top: 30px;
 }
+
 
 .profile-image {
     display: block;
     text-align: center;
   }
 
-  #btn-voltar {
+  #btn-back {
     position: absolute;
     top: 10px;
     left: 10px;
 }
 
-  .footer {
-    text-align: center;
-    margin-top: 20px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 15px;
-    background: gray;
-    color: white;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.2rem;
-  }
+.footer {
+  text-align: center;
+  padding: 1vw;
+  background: gray;
+  color: white;
+  font-weight: 500;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+}
