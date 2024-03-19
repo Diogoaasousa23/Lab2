@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="Styles/Index_style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-auto">
+      <img src="Assets/Images/Profile_picture.png" alt="Foto de Perfil" width="150" height="150">
+    </div>
+    <div class="col-md-3">
+      <div class="profile-container">
+        <br><br><h2 class="h2">Hello <span id="username" class="username">Diogo</span></h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="task-container">
+        <br> <h2 class="h2">My tasks</h2>
+        <table class="table table-bordered mt-3">
+          <thead>
+            <tr>
+              <th scope="col" class="th task-col">Task</th>
+              <th scope="col" class="th date-col">Date</th>
+              <th scope="col" class="th state-col">State</th>
+              <th scope="col" class="th actions-col">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="taskList" class="tbody">
+          </tbody>
+        </table>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newTaskModal">New Task</button>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal -->
+<div class="modal fade" id="newTaskModal" tabindex="-1" aria-labelledby="newTaskModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newTaskModalLabel">New Task</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="newTaskForm" class="form">
+          <div class="mb-3">
+            <label for="taskName" class="form-label">Description</label>
+            <input type="text" class="form-control" id="taskName" required>
+          </div>
+          <div class="mb-3">
+            <label for="taskDate" class="form-label">Date</label>
+            <input type="date" class="form-control" id="taskDate" required>
+          </div>
+          <button type="submit" class="btn btn-primary" id="addTaskBtn">Add task</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para editar e excluir tarefas -->
+<div class="modal fade" id="editTaskModal" tabindex="-1" aria-labelledby="editTaskModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editTaskModalLabel">Edit Task</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="editTaskForm" class="form">
+          <div class="mb-3">
+            <label for="editTaskName" class="form-label">Description</label>
+            <input type="text" class="form-control" id="editTaskName" required>
+          </div>
+          <div class="mb-3">
+            <label for="editTaskDate" class="form-label">Date</label>
+            <input type="date" class="form-control" id="editTaskDate" required>
+          </div>
+          <button type="submit" class="btn btn-primary" id="updateTaskBtn">Update task</button>
+          <button type="button" class="btn btn-danger" id="deleteTaskBtn">Delete task</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="top-right-buttons">
+      <a href="Manage_Profile.html" class="btn btn-outline-primary me-2">Manage Profile</a>
+      <a href="End_Session.html" class="btn btn-outline-danger">End Session</a>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="Styles/create_tasks.js"></script>
+<script src="Styles/edit_tasks.js"></script>
+
+<div class="footer">&copy;<span id="year"> </span><span> Copyright 2024 - Todos os direitos reservados por Capsule Corp. </span></div>
+</body>
+</html>
